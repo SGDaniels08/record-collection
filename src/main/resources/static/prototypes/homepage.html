@@ -9,34 +9,57 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="record-top header__titletop">Shawn's Records</h1>
-      <h1 class="record-bottom header__titlebottom">Untouched since 2015!</h1>
-      <nav class="nav">
-        <h2 class="nav__artists"><a>Artists</a></h2>
-        <h2 class="nav__albums"><a>Albums</a></h2>
-        <h2 class="nav__songs"><a>Songs</a></h2>
+      <div class="header__record">
+        <h1 class="header__record--top">Shawn's Records</h1>
+        <h1 class="header__record--bottom">Untouched since 2015!</h1>
+      </div>
+      <nav class="header__nav">
+        <h2 class="header__nav--artists"><a>Artists</a></h2>
+        <h2 class="header__nav--albums"><a>Albums</a></h2>
+        <h2 class="header__nav--songs"><a>Songs</a></h2>
       </nav>
     </header>
-    <main>
+    <main class="homepage__main">
       <section class="homepageartist">
         <h3 class="homepageartist__title">Artists</h3>
         <figure class="homepageartist__figure">
-          <img class="homepageartist_picture" />
-          <figcaption class="homepageartist__name">Florence + the Machine</figcaption>
+          <img
+            class="homepageartist__picture"
+            src="/src/main/resources/static/images/artists/florence+TheMachine.jpg"
+            alt="Picture of artist / band Florence + the Machine"
+          />
+          <figcaption class="homepageartist__name">
+            Florence + the Machine
+          </figcaption>
         </figure>
       </section>
       <section class="homepagealbum">
         <h3 class="homepagealbum__title">Albums</h3>
         <figure class="homepagealbum__figure">
-          <img class="homepagealbum__picture" />
-          <figcaption class="homepagealbum__name"></figcaption>
+          <img
+            class="homepagealbum__picture"
+            src="/src/main/resources/static/images/albums/muleVariations.jpg"
+            alt="Picture of the album Mule Variations, by Tom Waits"
+          />
+          <figcaption class="homepagealbum__name">
+            Mule Variations<br>
+            by Tom Waits
+          </figcaption>
         </figure>
       </section>
       <section class="homepagesong">
         <h3 class="homepagesong__title">Songs</h3>
         <figure class="homepagesong__figure">
-          <img class="homepagesong__picture"/>
-          <figcaption class="homepagesong__name"></figcaption>
+          <img
+            class="homepagesong__picture"
+            src="/src/main/resources/static/images/albums/heimdalsgateLikeAPrometheanCurse.jpg"
+            alt="Picture of Hissing Fauna, Are You the Destroyer?, the album by of Montreal that contains Heimdalsgate Like a Promethean Curse"
+          />
+          <figcaption class="homepagesong__name">
+            Heimdalsgate like a Promethean Curse<br>
+            on Hissing Fauna, Are You the Destroyer?<br>
+            by of Montreal
+          </figcaption>
         </figure>
       </section>
     </main>

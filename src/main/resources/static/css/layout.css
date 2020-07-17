@@ -4,3 +4,33 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.header {
+    margin-bottom: 5rem;
+}
+.header__record {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.homepage__main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.homepageartist__picture, .homepagealbum__picture, .homepagesong__picture {
+    width: 300px;
+    height: 300px;
+}
+
+.homepageartist, .homepagealbum, .homepagesong {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
