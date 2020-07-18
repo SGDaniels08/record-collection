@@ -17,3 +17,7 @@
 .songs__allSongs {
     list-style: none;
 }
+
+.songs__title {
+    font-size: 60pt;
+}
