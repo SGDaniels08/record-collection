@@ -19,7 +19,7 @@
     justify-content: space-around;
 }
 
-.homepage__main {
+.homepage__mainSection {
     display: flex;
     justify-content: space-around;
 }
@@ -36,18 +36,40 @@
 }
 
 .artists__mainSection {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
 }
 
-.artists__allArtists {
+.artists__wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
-.artists__singleArtistImage {
+.artists__singleArtistPicture {
     width: 300px;
     height: 300px;
+}
+
+.albums__singleArtistSection {
+    margin: 2rem;
+}
+.albums__singleArtistAlbums {
+    display: flex;
+    justify-content: space-around;
+}
+
+.albums__singleAlbumPicture {
+    width: 300px;
+    height: 300px;
+}
+
+.songs__title {
+    font-size: 60px;
+}
+
+.songs__allSongs {
+    margin-top: 2rem;
+    margin-left: 5rem;
 }

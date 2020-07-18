@@ -10,16 +10,73 @@
   <body>
     <header class="header">
       <div class="header__record">
-        <h1 class="header__record--top"><a href="/src/main/resources/static/prototypes/homepage.html">Shawn's Records</a></h1>
+        <h1 class="header__record--top">
+          <a href="/src/main/resources/static/prototypes/homepage.html"
+            >Shawn's Records</a
+          >
+        </h1>
         <h1 class="header__record--bottom">Untouched since 2015!</h1>
       </div>
       <nav class="header__nav">
-        <h2 class="header__nav--artists"><a href="/src/main/resources/static/prototypes/artists.html">Artists</a></h2>
-        <h2 class="header__nav--albums"><a href="/src/main/resources/static/prototypes/albums.html">Albums</a></h2>
-        <h2 class="header__nav--songs"><a href="/src/main/resources/static/prototypes/songs.html">Songs</a></h2>
+        <h2 class="header__nav--artists">
+          <a href="/src/main/resources/static/prototypes/artists.html"
+            >Artists</a
+          >
+        </h2>
+        <h2 class="header__nav--albums">
+          <a href="/src/main/resources/static/prototypes/albums.html">Albums</a>
+        </h2>
+        <h2 class="header__nav--songs">
+          <a href="/src/main/resources/static/prototypes/songs.html">Songs</a>
+        </h2>
       </nav>
     </header>
-    <main class="albums__main">
+    <main class="albums__mainSection">
+      <h2 class="albums__title">Albums</h2>
+
+      <section class="albums__singleArtistSection">
+        <h3>Tom Waits</h3>
+        <div class="albums__singleArtistAlbums">
+          <figure class="albums__singleAlbumSection">
+            <img
+              class="albums__singleAlbumPicture"
+              src="/src/main/resources/static/images/albums/muleVariations.jpg"
+              alt="Cover art for Mule Variations, an album by Tom Waits"
+            />
+            <figcaption class="albums__singleAlbumName">
+              Mule Variations
+            </figcaption>
+          </figure>
+
+          <figure class="albums__singleAlbumSection">
+            <img
+              class="albums__singleAlbumPicture"
+              src="/src/main/resources/static/images/albums/swordfishtrombones.jpg"
+              alt="Covert art for Swordfishtrombones, an album by Tom Waits"
+            />
+            <figcaption class="albums__singleAlbumName">
+              Swordfishtrombones
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="albums__singleArtistSection">
+        <h3>of Montreal</h3>
+        <div class="albums__singleArtistAlbums">
+          <figure class="albums__singleAlbumSection">
+            <img
+              class="albums__singleAlbumPicture"
+              src="/src/main/resources/static/images/albums/hissingFaunaAreYouTheDestroyer.jpg"
+              alt="Cover art for Hissing Fauna, Are You the Destroyer?, an album by of Montreal"
+            />
+            <figcaption class="albums__singleAlbumName">
+              Hissing Fauna, Are You the Destroyer?
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      
     </main>
   </body>
 </html>

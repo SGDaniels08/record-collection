@@ -1,3 +1,19 @@
 .header {
     background-color: lightgray;
 }
+
+.artists__title {
+    font-size: 60pt;
+}
+
+.albums__title {
+    font-size: 60pt;
+}
+
+.albums__singleArtistSection {
+    background-color: gainsboro;
+}
+
+.songs__allSongs {
+    list-style: none;
+}
