@@ -1,4 +1,4 @@
-package com.shawnsrecords.demo;
+package com.shawnsrecords.demo.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,8 +18,24 @@ public class Artist {
     private Collection<Album> albums;
 
     // Constructors
+    protected Artist() {}
+
+    public Artist(String name) {
+        this.name = name;
+    }
 
     // Getters
+
+    public long getId() {
+        return id;
+    }
+    public String getName() {
+        return name;
+    }
+    public Collection<Album> getAlbums() {
+        return albums;
+    }
+
 
     // Other methods
 }
