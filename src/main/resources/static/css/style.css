@@ -1,10 +1,18 @@
+/* All Views */
+
 .header {
     background-color: lightgray;
 }
 
+/* Artists View */
+
 .artists__title {
     font-size: 60pt;
 }
+
+/* Single Artist View */
+
+/* Albums View */
 
 .albums__title {
     font-size: 60pt;
@@ -13,6 +21,10 @@
 .albums__singleArtistSection {
     background-color: gainsboro;
 }
+
+/* Single Album View */
+
+/* Songs View */
 
 .songs__allSongs {
     list-style: none;

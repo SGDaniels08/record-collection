@@ -1,3 +1,5 @@
+/* All Views */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,6 +21,8 @@
     justify-content: space-around;
 }
 
+/* Homepage View */
+
 .homepage__mainSection {
     display: flex;
     justify-content: space-around;
@@ -34,6 +38,8 @@
     flex-direction: column;
     align-items: center;
 }
+
+/* Artists View */
 
 .artists__mainSection {
     display: grid;
@@ -52,6 +58,8 @@
     height: 300px;
 }
 
+/* Albums View */
+
 .albums__singleArtistSection {
     margin: 2rem;
 }
@@ -65,7 +73,51 @@
     height: 300px;
 }
 
+/* Songs View */
+
 .songs__allSongs {
     margin-top: 2rem;
     margin-left: 5rem;
+}
+
+/* Single Artist View */
+
+.singleArtistSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.singleArtist__figure {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    margin: 1rem auto;
+}
+
+.singleArtist__album {
+    margin: 1rem auto;
+}
+
+.singleArtist__picture {
+    height: 500px;
+    width: 500px;
+}
+
+.singleArtist__albumPicture {
+    height: 300px;
+    width: 300px;
+}
+
+/* Single Album View */
+
+.singleAlbumSection {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.singleAlbum__picture {
+    height: 500px;
+    width: 500px;
+    margin: 1rem auto;
 }
