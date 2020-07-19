@@ -35,9 +35,6 @@ public class Album {
     public Artist getArtist() {
         return artist;
     }
-    public Collection<Song> getSongs() {
-        return songs;
-    }
 
     // Other methods
 }

@@ -32,10 +32,6 @@ public class Artist {
     public String getName() {
         return name;
     }
-    public Collection<Album> getAlbums() {
-        return albums;
-    }
-
 
     // Other methods
 }
