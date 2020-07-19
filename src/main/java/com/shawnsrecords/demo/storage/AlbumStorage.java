@@ -8,6 +8,7 @@ import java.util.Collection;
 
 @Service
 public class AlbumStorage {
+
     // Instance Variables
     private AlbumRepository albumRepo;
 
