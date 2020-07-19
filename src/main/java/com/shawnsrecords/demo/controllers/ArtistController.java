@@ -1,7 +1,11 @@
 package com.shawnsrecords.demo.controllers;
 
+import com.shawnsrecords.demo.entities.Artist;
 import com.shawnsrecords.demo.storage.ArtistStorage;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Collection;
 
 @RestController
 public class ArtistController {
@@ -20,4 +24,8 @@ public class ArtistController {
     }
 
     // Mapping Methods
+    @GetMapping ("/api/artists")
+    public Iterable<Artist> findAllArtists() {
+        return artistStorage.findAllArtists();
+    }
 }
