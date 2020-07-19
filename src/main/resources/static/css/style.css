@@ -24,6 +24,10 @@
 
 /* Single Album View */
 
+.singleAlbum__title {
+    font-size: 60pt;
+}
+
 /* Songs View */
 
 .songs__allSongs {
