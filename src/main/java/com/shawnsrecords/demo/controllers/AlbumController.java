@@ -1,7 +1,11 @@
 package com.shawnsrecords.demo.controllers;
 
+import com.shawnsrecords.demo.entities.Album;
 import com.shawnsrecords.demo.storage.AlbumStorage;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Collection;
 
 @RestController
 public class AlbumController {
@@ -20,4 +24,8 @@ public class AlbumController {
     }
 
     // Mapping Methods
+    @GetMapping("/api/albums")
+    public Collection<Album> findAllAlbums() {
+        return albumStorage.findAllAlbums();
+    }
 }

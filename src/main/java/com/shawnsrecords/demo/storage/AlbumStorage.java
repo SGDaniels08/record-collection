@@ -23,7 +23,7 @@ public class AlbumStorage {
     }
 
     // Other methods
-    public Iterable<Album> getAllAlbums() {
-        return albumRepo.findAll();
+    public Collection<Album> findAllAlbums() {
+        return (Collection<Album>) albumRepo.findAll();
     }
 }

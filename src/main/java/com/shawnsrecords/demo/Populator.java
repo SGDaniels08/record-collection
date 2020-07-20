@@ -160,5 +160,21 @@ public class Populator implements CommandLineRunner {
         Song voltaic = new Song("Voltaic Crusherundrum to Muted Da", hissingFauna);
         Song derailments = new Song("Derailments in a Place of Our Own", hissingFauna);
         Song noConclusion = new Song("No Conclusion", hissingFauna);
+        songRepo.save(sufferForFashion);
+        songRepo.save(sinkTheSeine);
+        songRepo.save(catoAsAPun);
+        songRepo.save(heimdalsgate);
+        songRepo.save(gronlandicEdit);
+        songRepo.save(aSentenceOfSorts);
+        songRepo.save(thePastIsAGrotesqueAnimal);
+        songRepo.save(bunnyAintNo);
+        songRepo.save(fabergeFalls);
+        songRepo.save(labyrinthianPomp);
+        songRepo.save(shesARejecter);
+        songRepo.save(weWereBorn);
+        songRepo.save(duOgMeg);
+        songRepo.save(voltaic);
+        songRepo.save(derailments);
+        songRepo.save(noConclusion);
     }
 }

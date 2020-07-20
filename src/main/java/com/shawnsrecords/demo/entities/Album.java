@@ -1,6 +1,7 @@
 package com.shawnsrecords.demo.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -41,4 +42,5 @@ public class Album {
     public Collection<Song> getAlbumSongs() { return albumSongs; }
 
     // Other methods
+
 }
