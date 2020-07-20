@@ -3,6 +3,7 @@ package com.shawnsrecords.demo.controllers;
 import com.shawnsrecords.demo.entities.Artist;
 import com.shawnsrecords.demo.storage.ArtistStorage;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
@@ -25,7 +26,12 @@ public class ArtistController {
 
     // Mapping Methods
     @GetMapping ("/api/artists")
-    public Iterable<Artist> findAllArtists() {
+    public Collection<Artist> findAllArtists() {
         return artistStorage.findAllArtists();
+    }
+
+    @GetMapping ("/api/artists/{id}")
+    public Artist findArtistById(@PathVariable long id) {
+        return artistStorage.findArtistById(id);
     }
 }

@@ -23,7 +23,11 @@ public class ArtistStorage {
     }
 
     // Other methods
-    public Iterable<Artist> findAllArtists() {
-        return artistRepo.findAll();
+    public Collection<Artist> findAllArtists() {
+        return (Collection<Artist>) artistRepo.findAll();
+    }
+
+    public Artist findArtistById(long id) {
+        return artistRepo.findById(id).get();
     }
 }

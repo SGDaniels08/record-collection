@@ -13,15 +13,15 @@ public class Artist {
     @GeneratedValue
     @Id
     private long id;
-    private String name;
-    @OneToMany(mappedBy = "artist")
-    private Collection<Album> albums;
+    private String artistName;
+    @OneToMany(mappedBy = "albumArtist")
+    private Collection<Album> artistAlbums;
 
     // Constructors
     protected Artist() {}
 
-    public Artist(String name) {
-        this.name = name;
+    public Artist(String artistName) {
+        this.artistName = artistName;
     }
 
     // Getters
@@ -29,9 +29,10 @@ public class Artist {
     public long getId() {
         return id;
     }
-    public String getName() {
-        return name;
+    public String getArtistName() {
+        return artistName;
     }
+    public Collection<Album> getArtistAlbums() { return artistAlbums; }
 
     // Other methods
 }

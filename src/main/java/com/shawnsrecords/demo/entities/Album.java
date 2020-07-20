@@ -1,5 +1,7 @@
 package com.shawnsrecords.demo.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Collection;
 
@@ -10,18 +12,19 @@ public class Album {
     @GeneratedValue
     @Id
     private long id;
-    private String name;
+    private String albumName;
+    @JsonIgnore
     @ManyToOne
-    private Artist artist;
+    private Artist albumArtist;
     @OneToMany(mappedBy = "album")
-    private Collection<Song> songs;
+    private Collection<Song> albumSongs;
 
     // Constructors
     protected Album() {}
 
-    public Album(String name, Artist artist) {
-        this.name = name;
-        this.artist = artist;
+    public Album(String albumName, Artist albumArtist) {
+        this.albumName = albumName;
+        this.albumArtist = albumArtist;
     }
 
     // Getters
@@ -29,12 +32,13 @@ public class Album {
     public long getId() {
         return id;
     }
-    public String getName() {
-        return name;
+    public String getAlbumName() {
+        return albumName;
     }
-    public Artist getArtist() {
-        return artist;
+    public Artist getAlbumArtist() {
+        return albumArtist;
     }
+    public Collection<Song> getAlbumSongs() { return albumSongs; }
 
     // Other methods
 }

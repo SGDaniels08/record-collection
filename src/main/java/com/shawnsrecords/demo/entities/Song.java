@@ -1,5 +1,7 @@
 package com.shawnsrecords.demo.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,7 +15,7 @@ public class Song {
     @Id
     private long id;
     private String name;
-    private String duration;
+    @JsonIgnore
     @ManyToOne
     private Album album;
 
@@ -22,7 +24,6 @@ public class Song {
 
     public Song(String name, Album album) {
         this.name = name;
-        this.duration = duration;
         this.album = album;
     }
 
@@ -32,9 +33,6 @@ public class Song {
     }
     public String getName() {
         return name;
-    }
-    public String getDuration() {
-        return duration;
     }
     public Album getAlbum() {
         return album;
