@@ -14,28 +14,28 @@ public class Song {
     @GeneratedValue
     @Id
     private long id;
-    private String name;
+    private String songName;
     @JsonIgnore
     @ManyToOne
-    private Album album;
+    private Album songAlbum;
 
     // Constructors
     protected Song() {}
 
-    public Song(String name, Album album) {
-        this.name = name;
-        this.album = album;
+    public Song(String songName, Album songAlbum) {
+        this.songName = songName;
+        this.songAlbum = songAlbum;
     }
 
     // Getters
     public long getId() {
         return id;
     }
-    public String getName() {
-        return name;
+    public String getSongName() {
+        return songName;
     }
-    public Album getAlbum() {
-        return album;
+    public Album getSongAlbum() {
+        return songAlbum;
     }
 
     // Other methods

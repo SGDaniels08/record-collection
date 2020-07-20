@@ -1,7 +1,6 @@
 package com.shawnsrecords.demo.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -17,7 +16,7 @@ public class Album {
     @JsonIgnore
     @ManyToOne
     private Artist albumArtist;
-    @OneToMany(mappedBy = "album")
+    @OneToMany(mappedBy = "songAlbum")
     private Collection<Song> albumSongs;
 
     // Constructors

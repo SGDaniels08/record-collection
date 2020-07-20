@@ -22,8 +22,12 @@ public class AlbumStorage {
         return albumRepo;
     }
 
+
     // Other methods
     public Collection<Album> findAllAlbums() {
         return (Collection<Album>) albumRepo.findAll();
+    }
+    public Album findAlbumById(long id) {
+        return albumRepo.findById(id).get();
     }
 }

@@ -6,3 +6,6 @@ GET http://localhost:8080/api/albums
 ###
 GET http://localhost:8080/api/albums/7
 ###
+GET http://localhost:8080/api/songs
+###
+GET http://localhost:8080/api/songs/51

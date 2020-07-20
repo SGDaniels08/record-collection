@@ -3,6 +3,7 @@ package com.shawnsrecords.demo.controllers;
 import com.shawnsrecords.demo.entities.Album;
 import com.shawnsrecords.demo.storage.AlbumStorage;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
@@ -27,5 +28,10 @@ public class AlbumController {
     @GetMapping("/api/albums")
     public Collection<Album> findAllAlbums() {
         return albumStorage.findAllAlbums();
+    }
+
+    @GetMapping("/api/albums/{id}")
+    public Album findAlbumById(@PathVariable long id) {
+        return albumStorage.findAlbumById(id);
     }
 }
