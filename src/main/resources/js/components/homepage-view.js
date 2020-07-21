@@ -1,4 +1,4 @@
-const renderHomepage = () => {
+const renderHomepageView = () => {
 const contentContainer = document.querySelector("main");
 contentContainer.classList.add("homepage__mainSection");
 contentContainer.innerHTML = `
@@ -47,4 +47,4 @@ contentContainer.innerHTML = `
 `
 }
 
-export {renderHomepage}
+export {renderHomepageView}
