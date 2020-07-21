@@ -6,6 +6,9 @@ contentContainer.classList.add("artists__mainSection");
 contentContainer.innerHTML = `
 <h2 class="artists__title">Artists</h2>
 <div class="artists__wrapper">
+`
+// For each artist
+
 <figure class="artists__singleArtistSection">
   <img
     class="artists__singleArtistPicture"
