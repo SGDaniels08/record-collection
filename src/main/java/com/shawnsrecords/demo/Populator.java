@@ -27,10 +27,13 @@ public class Populator implements CommandLineRunner {
         Artist tomWaits = new Artist("Tom Waits", "tomWaits.jpg");
         Artist yeasayer = new Artist("Yeasayer", "yeasayer.jpg");
         Artist ofMontreal = new Artist("of Montreal", "ofMontreal.jpg");
+        Artist florenceWelch = new Artist("Florence + the Machine", "florence+TheMachine.jpg");
+
 
         artistRepo.save(tomWaits);
         artistRepo.save(yeasayer);
         artistRepo.save(ofMontreal);
+        artistRepo.save(florenceWelch);
 
         /* Albums */
         // Tom Waits
