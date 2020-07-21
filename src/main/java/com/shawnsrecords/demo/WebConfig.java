@@ -1,4 +1,4 @@
-package com.shawnsrecords.demo.controllers;
+package com.shawnsrecords.demo;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
