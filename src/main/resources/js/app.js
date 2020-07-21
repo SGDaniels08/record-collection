@@ -7,5 +7,5 @@ import { renderHomepageView } from "./components/homepage-view.js"
 import { renderSongsView } from "./components/songs-view.js"
 console.log(fetchAllArtists());
 
-renderArtistsView();
+renderAlbumsView();
 

@@ -16,7 +16,7 @@ fetchAllArtists().then((artists)=> {
     
     artists.forEach(artist => {
       console.log(artist);
-      let singleArtistSection = document.createElement("figure");
+      const singleArtistSection = document.createElement("figure");
       singleArtistSection.classList.add("artists__singleArtistSection");
       singleArtistSection.innerHTML = `
       <img
