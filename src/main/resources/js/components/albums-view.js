@@ -21,7 +21,7 @@ singleArtistName.innerHTML = `${artist.artistName}`;
 singleArtistSection.appendChild(singleArtistName);
 
 const singleArtistAlbums = document.createElement("div");
-singleArtistAlbums.classList.add("albums__singleArtistSection");
+singleArtistAlbums.classList.add("albums__singleArtistAlbums");
 
 
 (artist.artistAlbums).forEach((album)=> {
