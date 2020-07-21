@@ -24,9 +24,9 @@ public class Populator implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         /* Artists */
-        Artist tomWaits = new Artist("Tom Waits");
-        Artist yeasayer = new Artist("Yeasayer");
-        Artist ofMontreal = new Artist("of Montreal");
+        Artist tomWaits = new Artist("Tom Waits", "tomWaits.jpg");
+        Artist yeasayer = new Artist("Yeasayer", "yeasayer.jpg");
+        Artist ofMontreal = new Artist("of Montreal", "ofMontreal.jpg");
 
         artistRepo.save(tomWaits);
         artistRepo.save(yeasayer);
@@ -34,20 +34,20 @@ public class Populator implements CommandLineRunner {
 
         /* Albums */
         // Tom Waits
-        Album muleVariations = new Album("Mule Variations", tomWaits);
-        Album swordfishtrombones = new Album("Swordfishtrombones", tomWaits);
-        Album realGone = new Album("Real Gone", tomWaits);
+        Album muleVariations = new Album("Mule Variations", tomWaits, "muleVariations.jpg");
+        Album swordfishtrombones = new Album("Swordfishtrombones", tomWaits, "swordfishtrombones.jpg");
+        Album realGone = new Album("Real Gone", tomWaits, "realGone.jpg");
         albumRepo.save(muleVariations);
         albumRepo.save(swordfishtrombones);
         albumRepo.save(realGone);
 
         //Yeasayer
-        Album oddBlood = new Album("Odd Blood", yeasayer);
+        Album oddBlood = new Album("Odd Blood", yeasayer, "oddBlood.jpg");
         albumRepo.save(oddBlood);
 
         //of Montreal
-        Album hissingFauna = new Album("Hissing Fauna, Are You the Destroyer?", ofMontreal);
-        Album aureateGloom = new Album("Aureate Gloom", ofMontreal);
+        Album hissingFauna = new Album("Hissing Fauna, Are You the Destroyer?", ofMontreal, "hissingFaunaAreYouTheDestroyer.jpg");
+        Album aureateGloom = new Album("Aureate Gloom", ofMontreal, "aureateGloom.jpg");
         albumRepo.save(hissingFauna);
         albumRepo.save(aureateGloom);
 

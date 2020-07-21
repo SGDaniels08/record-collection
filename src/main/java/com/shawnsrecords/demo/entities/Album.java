@@ -18,13 +18,15 @@ public class Album {
     private Artist albumArtist;
     @OneToMany(mappedBy = "songAlbum")
     private Collection<Song> albumSongs;
+    private String imagePath;
 
     // Constructors
     protected Album() {}
 
-    public Album(String albumName, Artist albumArtist) {
+    public Album(String albumName, Artist albumArtist, String imagePath) {
         this.albumName = albumName;
         this.albumArtist = albumArtist;
+        this.imagePath = imagePath;
     }
 
     // Getters
@@ -39,6 +41,7 @@ public class Album {
         return albumArtist;
     }
     public Collection<Song> getAlbumSongs() { return albumSongs; }
+    public String getImagePath() { return imagePath; }
 
     // Other methods
 
