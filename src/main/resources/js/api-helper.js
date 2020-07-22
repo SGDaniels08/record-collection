@@ -25,14 +25,14 @@ const fetchSingleAlbum = async (albumId) => {
 };
 
 const fetchAllSongs = async () => {
-  return fetch(`http://localhost:8080/api/songs`).then(
-    (response) => response.json
+  return fetch("http://localhost:8080/api/songs").then(
+    (response) => response.json()
   );
 };
 
 const fetchSingleSong = async (songId) => {
   return fetch(`http://localhost:8080/api/songs/${songId}`).then(
-    (response) => response.json
+    (response) => response.json()
   );
 };
 
