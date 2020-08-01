@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.Random;
 
 @RestController
 public class AlbumController {
@@ -33,5 +35,12 @@ public class AlbumController {
     @GetMapping("/api/albums/{id}")
     public Album findAlbumById(@PathVariable long id) {
         return albumStorage.findAlbumById(id);
+    }
+
+    @GetMapping("/api/albums/random")
+    public Album findRandomAlbum() {
+        Random rnd = new Random();
+        List<Album> allAlbums = (List<Album>) albumStorage.findAllAlbums();
+        return allAlbums.get(rnd.nextInt(allAlbums.size()));
     }
 }

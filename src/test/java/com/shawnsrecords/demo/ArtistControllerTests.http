@@ -9,3 +9,7 @@ GET http://localhost:8080/api/albums/7
 GET http://localhost:8080/api/songs
 ###
 GET http://localhost:8080/api/songs/51
+###
+GET http://localhost:8080/api/artists/random
+###
+GET http://localhost:8080/api/albums/random

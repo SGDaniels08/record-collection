@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.Random;
 
 @RestController
 public class ArtistController {
@@ -33,5 +35,12 @@ public class ArtistController {
     @GetMapping ("/api/artists/{id}")
     public Artist findArtistById(@PathVariable long id) {
         return artistStorage.findArtistById(id);
+    }
+
+    @GetMapping ("/api/artists/random")
+    public Artist findRandomArtist() {
+        Random rnd = new Random();
+        List<Artist> allArtists = (List<Artist>) artistStorage.findAllArtists();
+        return allArtists.get(rnd.nextInt(allArtists.size()));
     }
 }
