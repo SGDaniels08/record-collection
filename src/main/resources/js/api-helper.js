@@ -12,6 +12,11 @@ const fetchSingleArtist = async (artistId) => {
   ).then((response) => response.json());
 };
 
+const fetchRandomArtist = async() => {
+  return fetch(`http://localhost:8080/api/artists/random`)
+  .then((response) => response.json());
+}
+
 const fetchAllAlbums = async () => {
   return fetch("http://localhost:8080/api/albums").then((response) =>
     response.json()
@@ -23,6 +28,11 @@ const fetchSingleAlbum = async (albumId) => {
     response.json()
   );
 };
+
+const fetchRandomAlbum = async() => {
+  return fetch(`http://localhost:8080/api/albums/random`)
+  .then((response) => response.json());
+}
 
 const fetchAllSongs = async () => {
   return fetch("http://localhost:8080/api/songs").then(
@@ -36,11 +46,19 @@ const fetchSingleSong = async (songId) => {
   );
 };
 
+const fetchRandomSong = async() => {
+  return fetch(`http://localhost:8080/api/songs/random`)
+  .then((response) => response.json());
+}
+
 export {
   fetchAllArtists,
   fetchSingleArtist,
+  fetchRandomArtist,
   fetchAllAlbums,
   fetchSingleAlbum,
+  fetchRandomAlbum,
   fetchAllSongs,
   fetchSingleSong,
+  fetchRandomSong,
 };
