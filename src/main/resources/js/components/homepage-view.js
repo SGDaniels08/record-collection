@@ -4,6 +4,11 @@ const renderHomepageView = () => {
 const contentContainer = document.querySelector("main");
 contentContainer.classList.add("homepage__mainSection");
 
+//Clear main
+while (contentContainer.firstChild) {
+  contentContainer.firstChild.remove();
+}
+
 /*** Random Artist ***/
 const randomArtist = document.createElement("section");
 randomArtist.classList.add("homepageArtist");
@@ -22,7 +27,6 @@ fetchRandomArtist().then((artist)=> {
       </figcaption>
     </figure>
   `
-  contentContainer.append(randomArtist);  
 })
 
 /*** Random Album ***/
@@ -44,7 +48,6 @@ fetchRandomAlbum().then((album)=> {
     </figcaption>
   </figure>  
   `
-  contentContainer.append(randomAlbum);
 })
 
 /*** Random Song ***/
@@ -67,7 +70,11 @@ fetchRandomSong().then((song)=> {
     </figcaption>
   </figure>
   `
-  contentContainer.append(randomSong);
-})}
+})
+contentContainer.append(randomArtist);  
+contentContainer.append(randomAlbum);  
+contentContainer.append(randomSong);  
+
+}
 
 export {renderHomepageView}

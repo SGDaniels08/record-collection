@@ -1,6 +1,12 @@
 const renderSingleAlbumView = () => {
 
 const contentContainer = document.querySelector("main");
+
+//Clear main
+contentContainer.classList.remove();
+while (contentContainer.firstChild) {
+  contentContainer.firstChild.remove();
+}
 contentContainer.classList.add("singleAlbumSection");
 
 contentContainer.innerHTML = `

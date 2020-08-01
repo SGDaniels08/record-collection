@@ -3,6 +3,11 @@ const renderSingleArtistView = ()=> {
 const contentContainer = document.querySelector("main");
 contentContainer.classList.add("singleArtistSection");
 
+//Clear main
+while (contentContainer.firstChild) {
+    contentContainer.firstChild.remove();
+}
+
 contentContainer.innerHTML = `
 <figure class="singleArtist__figure" >
 <img class="singleArtist__picture" src="../static/images/artists/tomWaits.jpg" alt="A picture of band / artist Tom Waits" />

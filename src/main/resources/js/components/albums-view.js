@@ -3,7 +3,15 @@ import { fetchAllArtists } from "../api-helper.js";
 const renderAlbumsView = ()=> {
 
 const contentContainer = document.querySelector("main");
+
+//Clear main
+contentContainer.classList.remove();
+while (contentContainer.firstChild) {
+  contentContainer.firstChild.remove();
+}
+
 contentContainer.classList.add("albums__mainSection");
+
 
 const albumsTitle = document.createElement("h2");
 albumsTitle.classList.add("albums__title");

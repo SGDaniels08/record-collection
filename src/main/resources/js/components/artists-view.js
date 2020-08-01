@@ -4,6 +4,11 @@ const renderArtistsView = () => {
 const contentContainer = document.querySelector("main");
 contentContainer.classList.add("artists__mainSection");
 
+//Clear main
+while (contentContainer.firstChild) {
+  contentContainer.firstChild.remove();
+}
+
 const artistsTitle = document.createElement("h2");
 artistsTitle.classList.add("artists__title");
 artistsTitle.innerHTML = "Artists"
