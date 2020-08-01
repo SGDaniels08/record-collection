@@ -5,7 +5,7 @@ import { renderSingleArtistView } from "./components/artist-view.js"
 import { renderArtistsView } from "./components/artists-view.js"
 import { renderHomepageView } from "./components/homepage-view.js"
 import { renderSongsView } from "./components/songs-view.js"
-console.log(fetchAllSongs());
 
-renderSongsView();
+
+renderHomepageView();
 
