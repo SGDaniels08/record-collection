@@ -2,6 +2,7 @@ import {
   fetchRandomArtist,
   fetchRandomAlbum,
   fetchRandomSong,
+  fetchAlbumArtist,
 } from "../api-helper.js";
 
 const renderHomepageView = () => {
@@ -45,19 +46,21 @@ const renderHomepageView = () => {
   /*** Random Album ***/
   const randomAlbum = document.createElement("section");
   randomAlbum.classList.add("homepageAlbum");
-
+  
   fetchRandomAlbum().then((album) => {
+    const albumArtist = fetchAlbumArtist(album.id);
+    console.log(albumArtist);
     randomAlbum.innerHTML = `
   <h3 class="homepagealbum__title">Albums</h3>
   <figure class="homepagealbum__figure">
     <img
       class="homepagealbum__picture"
       src="/src/main/resources/static/images/albums/${album.imagePath}"
-      alt="Picture of the album ${album.albumName}, by --ARTIST--"
+      alt="Picture of the album ${album.albumName}, by ${albumArtist.artistName}"
     />
     <figcaption class="homepagealbum__name">
       ${album.albumName}<br />
-      by --ARTIST--
+      by ${albumArtist.artistName}
     </figcaption>
   </figure>  
   `;
