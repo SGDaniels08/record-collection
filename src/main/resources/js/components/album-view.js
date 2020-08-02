@@ -1,4 +1,6 @@
-const renderSingleAlbumView = () => {
+import { fetchSingleAlbum, fetchAlbumArtist } from "../api-helper.js";
+
+const renderSingleAlbumView = (albumId) => {
 
 const contentContainer = document.querySelector(".content__container");
 
@@ -15,36 +17,35 @@ contentContainer.classList.remove(
 }
 contentContainer.classList.add("singleAlbumSection");
 
-contentContainer.innerHTML = `
+fetchSingleAlbum(albumId).then((album)=> {
+  fetchAlbumArtist(album.id).then((albumArtist)=> {
+
+const singleAlbumFigure = document.createElement("figure");
+singleAlbumFigure.classList.add("singleAlbum__figure");
+singleAlbumFigure.innerHTML = `
 <figure class="singleAlbum__figure">
-        <h2 class="singleAlbum__title">Mule Variations</h2>
+        <h2 class="singleAlbum__title">${album.albumName}</h2>
         <img
           class="singleAlbum__picture"
-          src="../static/images/albums/muleVariations.jpg"
-          alt="Cover art for Mule Variations, an album by Tom Waits"
+          src="../static/images/albums/${album.imagePath}"
+          alt="Cover art for ${album.albumName}, an album by ${albumArtist.artistName}"
         />
-        <figcaption class="singleAlbum__artistName">by Tom Waits</figcaption>
+        <figcaption class="singleAlbum__artistName">by ${albumArtist.artistName}</figcaption>
       </figure>
-
-      <ol class="singleAlbum__songlist">
-        <li class="singleAlbum__song">Big in Japan</li>
-        <li class="singleAlbum__song">Low Side of the Road</li>
-        <li class="singleAlbum__song">Hold On</li>
-        <li class="singleAlbum__song">Get Behind the Mule</li>
-        <li class="singleAlbum__song">House Where Nobody Lives</li>
-        <li class="singleAlbum__song">Cold Water</li>
-        <li class="singleAlbum__song">Pony</li>
-        <li class="singleAlbum__song">What's He Building?</li>
-        <li class="singleAlbum__song">Black Market Baby</li>
-        <li class="singleAlbum__song">Eyeball Kid</li>
-        <li class="singleAlbum__song">Picture in a Frame</li>
-        <li class="singleAlbum__song">Chocolate Jesus</li>
-        <li class="singleAlbum__song">Georgia Lee</li>
-        <li class="singleAlbum__song">Filipino Box Spring Hog</li>
-        <li class="singleAlbum__song">Take It with Me</li>
-        <li class="singleAlbum__song">Come on up to the House</li>
-      </ol>
 `
-}
+
+const singleAlbumSonglist = document.createElement("ol");
+singleAlbumSonglist.classList.add("singleAlbum__songlist");
+
+album.albumSongs.forEach(song => {
+  const singleAlbumSong = document.createElement("li")
+  singleAlbumSong.classList.add("singleAlbum__song");
+  singleAlbumSong.innerHTML = `${song.songName}`
+  
+  singleAlbumSonglist.appendChild(singleAlbumSong);  
+})
+contentContainer.appendChild(singleAlbumFigure);
+contentContainer.appendChild(singleAlbumSonglist);
+})})}
 
 export {renderSingleAlbumView}

@@ -13,7 +13,9 @@ contentContainer.classList.remove(
   "artists__mainSection",
   "songs__mainSection",
   "homepage__mainSection"
-);while (contentContainer.firstChild) {
+);
+
+while (contentContainer.firstChild) {
   contentContainer.firstChild.remove();
 }
 

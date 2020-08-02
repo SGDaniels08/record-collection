@@ -5,6 +5,8 @@ import {
   fetchAlbumArtist,
   fetchSongAlbum,
 } from "../api-helper.js";
+import { renderSingleArtistView } from "./artist-view.js";
+import { renderSingleAlbumView } from "./album-view.js";
 
 const renderHomepageView = () => {
   const contentContainer = document.querySelector(".content__container");
@@ -42,6 +44,7 @@ const renderHomepageView = () => {
       </figcaption>
     </figure>
   `;
+
   });
 
   /*** Random Album ***/
@@ -49,7 +52,7 @@ const renderHomepageView = () => {
   randomAlbum.classList.add("homepageAlbum");
   
   fetchRandomAlbum().then((album) => {
-    fetchAlbumArtist(album.id).then((albumArtist)=> {;
+    fetchAlbumArtist(album.id).then((albumArtist)=> {
     console.log(albumArtist);
     randomAlbum.innerHTML = `
   <h3 class="homepagealbum__title">Albums</h3>
@@ -65,7 +68,8 @@ const renderHomepageView = () => {
     </figcaption>
   </figure>  
   `;
-  })});
+  })
+});
 
   /*** Random Song ***/
   const randomSong = document.createElement("section");
@@ -93,6 +97,9 @@ const renderHomepageView = () => {
   contentContainer.append(randomArtist);
   contentContainer.append(randomAlbum);
   contentContainer.append(randomSong);
+  
+  
+
 })})};
 
 export { renderHomepageView };

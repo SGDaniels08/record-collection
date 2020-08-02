@@ -1,4 +1,6 @@
-const renderSingleArtistView = () => {
+import { fetchSingleArtist } from "../api-helper.js"
+
+const renderSingleArtistView = (artistId) => {
   const contentContainer = document.querySelector(".content__container");
 
   //Clear main
@@ -17,6 +19,7 @@ const renderSingleArtistView = () => {
 
   contentContainer.classList.add("singleArtistSection");
 
+  fetchSingleArtist(artistId).then((artist) => {
   contentContainer.innerHTML = `
 <figure class="singleArtist__figure" >
 <img class="singleArtist__picture" src="../static/images/artists/tomWaits.jpg" alt="A picture of band / artist Tom Waits" />
@@ -38,6 +41,6 @@ const renderSingleArtistView = () => {
 <figcaption class="singleArtist__albumName">Real Gone</figcaption>
 </figure>
 `;
-};
+})};
 
 export { renderSingleArtistView };
