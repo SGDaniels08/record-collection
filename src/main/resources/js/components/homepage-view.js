@@ -3,6 +3,7 @@ import {
   fetchRandomAlbum,
   fetchRandomSong,
   fetchAlbumArtist,
+  fetchSongAlbum,
 } from "../api-helper.js";
 
 const renderHomepageView = () => {
@@ -48,7 +49,7 @@ const renderHomepageView = () => {
   randomAlbum.classList.add("homepageAlbum");
   
   fetchRandomAlbum().then((album) => {
-    const albumArtist = fetchAlbumArtist(album.id);
+    fetchAlbumArtist(album.id).then((albumArtist)=> {;
     console.log(albumArtist);
     randomAlbum.innerHTML = `
   <h3 class="homepagealbum__title">Albums</h3>
@@ -64,25 +65,27 @@ const renderHomepageView = () => {
     </figcaption>
   </figure>  
   `;
-  });
+  })});
 
   /*** Random Song ***/
   const randomSong = document.createElement("section");
   randomSong.classList.add("homepageSong");
 
   fetchRandomSong().then((song) => {
+    fetchSongAlbum(song.id).then((songAlbum) => {
+      fetchAlbumArtist(songAlbum.id).then((songArtist) => {
     randomSong.innerHTML = `
   <h3 class="homepagesong__title">Songs</h3>
   <figure class="homepagesong__figure">
     <img
       class="homepagesong__picture"
-      src="/src/main/resources/static/images/albums/hissingFaunaAreYouTheDestroyer.jpg"
-      alt="Picture of --ALBUM--, the album by --ARTIST-- that contains ${song.songName}"
+      src="/src/main/resources/static/images/albums/${songAlbum.imagePath}"
+      alt="Picture of ${songAlbum.albumName}, the album by ${songArtist.artistName} that contains ${song.songName}"
     />
     <figcaption class="homepagesong__name">
       ${song.songName}<br />
-      on --ALBUM--?<br />
-      by --ARTIST--
+      on ${songAlbum.albumName}<br />
+      by ${songArtist.artistName}
     </figcaption>
   </figure>
   `;
@@ -90,6 +93,6 @@ const renderHomepageView = () => {
   contentContainer.append(randomArtist);
   contentContainer.append(randomAlbum);
   contentContainer.append(randomSong);
-};
+})})};
 
 export { renderHomepageView };
