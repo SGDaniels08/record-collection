@@ -1,17 +1,22 @@
 GET http://localhost:8080/api/artists
 ###
-GET http://localhost:8080/api/artists/2
+GET http://localhost:8080/api/artists/27
 ###
 GET http://localhost:8080/api/albums
 ###
-GET http://localhost:8080/api/albums/7
+GET http://localhost:8080/api/albums/56
 ###
 GET http://localhost:8080/api/songs
 ###
-GET http://localhost:8080/api/songs/51
+GET http://localhost:8080/api/songs/100
 ###
 GET http://localhost:8080/api/artists/random
 ###
 GET http://localhost:8080/api/albums/random
 ###
 GET http://localhost:8080/api/songs/random
+###
+GET http://localhost:8080/api/albums/56/artist
+###
+GET http://localhost:8080/api/songs/100/album
+###

@@ -1,6 +1,7 @@
 package com.shawnsrecords.demo.controllers;
 
 import com.shawnsrecords.demo.entities.Album;
+import com.shawnsrecords.demo.entities.Artist;
 import com.shawnsrecords.demo.storage.AlbumStorage;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -42,5 +43,10 @@ public class AlbumController {
         Random rnd = new Random();
         List<Album> allAlbums = (List<Album>) albumStorage.findAllAlbums();
         return allAlbums.get(rnd.nextInt(allAlbums.size()));
+    }
+
+    @GetMapping("/api/albums/{id}/artist")
+    public Artist findAlbumArtist(@PathVariable long id) {
+        return albumStorage.findAlbumById(id).getAlbumArtist();
     }
 }

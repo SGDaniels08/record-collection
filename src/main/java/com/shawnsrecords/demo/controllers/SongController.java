@@ -1,5 +1,6 @@
 package com.shawnsrecords.demo.controllers;
 
+import com.shawnsrecords.demo.entities.Album;
 import com.shawnsrecords.demo.entities.Song;
 import com.shawnsrecords.demo.storage.SongStorage;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,5 +43,10 @@ public class SongController {
         Random rnd = new Random();
         List<Song> allSongs = (List<Song>) songStorage.findAllSongs();
         return allSongs.get(rnd.nextInt(allSongs.size()));
+    }
+
+    @GetMapping("/api/songs/{id}/album")
+    public Album findSongAlbum(@PathVariable long id) {
+        return songStorage.findSongById(id).getSongAlbum();
     }
 }
