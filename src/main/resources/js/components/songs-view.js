@@ -1,4 +1,4 @@
-import { fetchAllSongs, fetchAllArtists } from "../api-helper.js"
+import { fetchAllSongs, fetchAllArtists, fetchSongAlbum, fetchAlbumArtist } from "../api-helper.js"
 
 const renderSongsView = ()=> {
 
@@ -33,13 +33,15 @@ contentContainer.appendChild(songsAllSongs);
 fetchAllSongs().then((songs)=> {
   // sort songs
   songs.forEach((song)=> {
+    fetchSongAlbum(song.id).then((songAlbum)=> {
+      fetchAlbumArtist(songAlbum.id).then((songArtist)=> {
     const songsSong = document.createElement("li");
     songsSong.classList.add("songs__song");
-    songsSong.innerHTML = `${song.songName} -- `;
+    songsSong.innerHTML = `${song.songName} -- on ${songAlbum.albumName}, by ${songArtist.artistName}`;
 
     songsAllSongs.appendChild(songsSong);
   })
 })
-};
+})})};
 
 export {renderSongsView}
