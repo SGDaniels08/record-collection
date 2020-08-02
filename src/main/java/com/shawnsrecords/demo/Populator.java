@@ -28,12 +28,58 @@ public class Populator implements CommandLineRunner {
         Artist yeasayer = new Artist("Yeasayer", "yeasayer.jpg");
         Artist ofMontreal = new Artist("of Montreal", "ofMontreal.jpg");
         Artist florenceWelch = new Artist("Florence + the Machine", "florence+TheMachine.jpg");
+        Artist stVincent = new Artist("St. Vincent", "stVincent.png");
+        Artist spoon = new Artist("Spoon", "spoon.jpg");
+        Artist neutralMilkHotel = new Artist("Neutral Milk Hotel", "neutralMilkHotel.jpg");
+        Artist belleAndSebastian = new Artist("Belle and Sebastian", "belleAndSebastian.jpg");
+        Artist whiteStripes = new Artist("The White Stripes", "whiteStripes.jpg");
+        Artist moodyBlues = new Artist("The Moody Blues", "moodyBlues.jpg");
+        Artist ensemble = new Artist("Ensemble Records", "ensemble.jpg");
+        Artist ajj = new Artist("AJJ", "ajj.jpg");
+        Artist billyJoel = new Artist("Billy Joel", "billyJoel.jpg");
+        Artist franzLiszt = new Artist("Franz Liszt", "franzLiszt.jpg");
+        Artist decemberists = new Artist("The Decemberists", "decemberists.png");
+        Artist wishfulThinking = new Artist("Wishful Thinking", "wishfulThinking.jpg");
+        Artist vampireWeekend = new Artist("Vampire Weekend", "vampireWeekend.jpg");
+        Artist tchaikovsky = new Artist("Tchaikovsky", "tchaikovsky.jpg");
+        Artist someoneStillLoves = new Artist("Someone Still Loves You, Boris Yeltsin", "someoneStillLovesYouBorisYeltsin.jpg");
+        Artist shins = new Artist("The Shins", "shins.jpg");
+        Artist sheAndHim = new Artist("She & Him", "sheAndHim.jpg");
+        Artist arcadeFire = new Artist("Arcade Fire", "arcadeFire.jpg");
+        Artist nittyGritty = new Artist("The Nitty Gritty Dirt Band", "nittyGrittyDirtBand.jpg");
+        Artist ledZeppelin = new Artist("Led Zeppelin", "ledZeppelin.jpg");
+        Artist ironAndWine = new Artist("Iron & Wine", "ironAndWine.jpg");
+        Artist fruitBats = new Artist("Fruit Bats", "fruitBats.jpg");
+        Artist bobDylan = new Artist("Bob Dylan", "bobDylan.jpg");
 
 
+        artistRepo.save(belleAndSebastian);
+        artistRepo.save(whiteStripes);
+        artistRepo.save(moodyBlues);
+        artistRepo.save(ensemble);
+        artistRepo.save(billyJoel);
+        artistRepo.save(franzLiszt);
+        artistRepo.save(decemberists);
+        artistRepo.save(wishfulThinking);
+        artistRepo.save(vampireWeekend);
+        artistRepo.save(tchaikovsky);
+        artistRepo.save(someoneStillLoves);
+        artistRepo.save(shins);
+        artistRepo.save(sheAndHim);
+        artistRepo.save(arcadeFire);
+        artistRepo.save(nittyGritty);
+        artistRepo.save(ledZeppelin);
+        artistRepo.save(ironAndWine);
+        artistRepo.save(fruitBats);
+        artistRepo.save(bobDylan);
         artistRepo.save(tomWaits);
         artistRepo.save(yeasayer);
         artistRepo.save(ofMontreal);
         artistRepo.save(florenceWelch);
+        artistRepo.save(stVincent);
+        artistRepo.save(spoon);
+        artistRepo.save(neutralMilkHotel);
+        artistRepo.save(ajj);
 
         /* Albums */
         // Tom Waits
@@ -51,8 +97,20 @@ public class Populator implements CommandLineRunner {
         //of Montreal
         Album hissingFauna = new Album("Hissing Fauna, Are You the Destroyer?", ofMontreal, "hissingFaunaAreYouTheDestroyer.jpg");
         Album aureateGloom = new Album("Aureate Gloom", ofMontreal, "aureateGloom.jpg");
+        Album sunlandicTwins = new Album("Sunlandic Twins", ofMontreal, "sunlandicTwins.jpg");
         albumRepo.save(hissingFauna);
         albumRepo.save(aureateGloom);
+
+        //Florence + the Machine
+        Album lungs = new Album("Lungs", florenceWelch, "lungs.png");
+        Album ceremonials = new Album("Ceremonials", florenceWelch, "ceremonials.png");
+        albumRepo.save(lungs);
+        albumRepo.save(ceremonials);
+
+        //Spoon
+
+        //Neutral Milk Hotel
+        Album onAveryIsland = new Album("On Avery Island", neutralMilkHotel, "onAveryIsland.jpg");
 
         /* Songs */
 
