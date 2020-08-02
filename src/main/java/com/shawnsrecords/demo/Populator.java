@@ -92,12 +92,16 @@ public class Populator implements CommandLineRunner {
 
         //Yeasayer
         Album oddBlood = new Album("Odd Blood", yeasayer, "oddBlood.jpg");
+        Album fragrantWorld = new Album("Fragrant World", yeasayer, "fragrantWorld.jpg");
+        Album allHourCymbals = new Album("All Hour Cymbals", yeasayer, "allHourCymbals.jpg");
         albumRepo.save(oddBlood);
+        albumRepo.save(fragrantWorld);
 
         //of Montreal
         Album hissingFauna = new Album("Hissing Fauna, Are You the Destroyer?", ofMontreal, "hissingFaunaAreYouTheDestroyer.jpg");
         Album aureateGloom = new Album("Aureate Gloom", ofMontreal, "aureateGloom.jpg");
         Album sunlandicTwins = new Album("Sunlandic Twins", ofMontreal, "sunlandicTwins.jpg");
+        Album lousy = new Album("Lousy With Sylvianbriar", ofMontreal, "lousyWithSylvianbriar.jpg");
         albumRepo.save(hissingFauna);
         albumRepo.save(aureateGloom);
 
@@ -107,10 +111,78 @@ public class Populator implements CommandLineRunner {
         albumRepo.save(lungs);
         albumRepo.save(ceremonials);
 
+        //St. Vincent
+        Album strangeMercy = new Album("Strange Mercy", stVincent, "strangeMercy.jpg");
+        Album marryMe = new Album("Marry Me", stVincent, "marryMe.jpg");
+
+        //Arcade Fire
+        Album neonBible = new Album("Neon Bible", arcadeFire, "neonBible.jpg");
+        Album funeral = new Album("Funeral", arcadeFire, "funeral.jpg");
+
+        //Someone Still Loves You, Boris Yeltsin
+        Album highCountry = new Album("The High Country", someoneStillLoves, "highCountry.jpg");
+
+        //Vampire Weekend
+        Album vampireWeekendAlbum = new Album("Vampire Weekend", vampireWeekend, "vampireWeekendAlbum.jpg");
+
+        //Billy Joel
+        Album nylonCurtain = new Album("The Nylon Curtain", billyJoel, "nylonCurtain.jpg");
+
+        //Decemberists
+        Album craneWife = new Album("The Crane Wife", decemberists, "craneWife.jpg");
+
+        //She & Him
+        Album volume2 = new Album("Volume 2", sheAndHim, "volume2.jpg");
+
+        //Tchaikovsky
+        Album overture1812 = new Album("1812 Overture", tchaikovsky, "overture1812.jpg");
+
+        //Fruit Bats
+        Album tripper = new Album("Tripper", fruitBats, "tripper.jpg");
+
         //Spoon
+        Album gaGaGaGaGa = new Album("Ga Ga Ga Ga Ga", spoon, "gaGaGaGaGa.jpg");
+
+        //AJJ
+        Album candyCigarettes = new Album("Candy Cigarettes Capguns Issues Problems and Such", ajj, "candyCigarettes.jpg");
+
+        //Iron & Wine
+        Album creekDrank = new Album("The Creek Drank the Cradle", ironAndWine, "creekDrankTheCradle.jpg");
+
+        //White Stripes
+        Album singleLafayette = new Album("Lafayette Blues (single)", whiteStripes, "lafayetteBluesSingle.jpg");
+        Album singleShakeHands = new Album("Let's Shake Hands (single)", whiteStripes, "letsShakeHands.jpg");
+
+        //Shins
+        Album portOfMorrow = new Album("Port of Morrow", shins, "portOfMorrow.jpg");
+
+        //The Moody Blues
+        Album daysOfFuturePassed = new Album("Days of Future Passed", moodyBlues, "daysOfFuturePassed.jpg");
 
         //Neutral Milk Hotel
         Album onAveryIsland = new Album("On Avery Island", neutralMilkHotel, "onAveryIsland.jpg");
+
+        //Belle and Sebastian
+        Album writeAboutLove = new Album("Write about Love", belleAndSebastian, "writeAboutLove.jpg");
+        Album singleSuicideGirl = new Album("Suicide Girl", belleAndSebastian, "singleSuicideGirl.jpg");
+
+        //Wishful Thinking
+        Album wishfulThinkingAlbum = new Album("Wishful Thinking", wishfulThinking, "wishfulThinking.jpg");
+
+        //Bob Dylan
+        Album timesChangin = new Album("The Times They Are a-Changin'", bobDylan, "timesTheyAreAChangin.jpg");
+
+        //Nitty Gritty Dirt Band
+        Album symphonionDream = new Album("Symphonion Dream", nittyGritty, "symphonionDream.jpg");
+
+        //Franz Liszt
+        Album hungarianFantasy = new Album("Piano Concerto No.1: Hungarian Fantasy", franzLiszt, "hungarianFantasy.jpg");
+
+        //Led Zeppelin
+        Album four = new Album("IV", ledZeppelin, "zeppelinFour.jpg");
+
+        //Ensemble Recordings
+        Album whereTheBuffaloRoam = new Album("Soundtrack to Where the Buffalo Roam", ensemble, "whereTheBuffaloRoam.jpg");
 
         /* Songs */
 
