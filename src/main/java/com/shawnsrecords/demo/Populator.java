@@ -191,7 +191,7 @@ public class Populator implements CommandLineRunner {
         albumRepo.save(singleSuicideGirl);
 
         //Wishful Thinking
-        Album wishfulThinkingAlbum = new Album("Wishful Thinking", wishfulThinking, "wishfulThinking.jpg");
+        Album wishfulThinkingAlbum = new Album("Wishful Thinking", wishfulThinking, "wishfulThinkingAlbum.jpg");
         albumRepo.save(wishfulThinkingAlbum);
 
         //Bob Dylan
