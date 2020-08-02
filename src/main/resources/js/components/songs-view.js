@@ -2,10 +2,18 @@ import { fetchAllSongs, fetchAllArtists } from "../api-helper.js"
 
 const renderSongsView = ()=> {
 
-const contentContainer = document.querySelector("main");
+const contentContainer = document.querySelector(".content__container");
 
 //Clear main
-contentContainer.classList.remove();
+contentContainer.classList.remove(
+  "singleAlbumSection",
+  "albums__mainSection",
+  "singleArtistSection",
+  "artists__mainSection",
+  "songs__mainSection",
+  "homepage__mainSection"
+);
+
 while (contentContainer.firstChild) {
   contentContainer.firstChild.remove();
 }
@@ -31,7 +39,7 @@ fetchAllSongs().then((songs)=> {
 
     songsAllSongs.appendChild(songsSong);
   })
-});
-}
+})
+};
 
 export {renderSongsView}

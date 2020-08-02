@@ -1,20 +1,33 @@
-import { fetchRandomArtist, fetchRandomAlbum, fetchRandomSong } from "../api-helper.js";
+import {
+  fetchRandomArtist,
+  fetchRandomAlbum,
+  fetchRandomSong,
+} from "../api-helper.js";
 
 const renderHomepageView = () => {
-const contentContainer = document.querySelector("main");
-contentContainer.classList.add("homepage__mainSection");
+  const contentContainer = document.querySelector(".content__container");
 
-//Clear main
-while (contentContainer.firstChild) {
-  contentContainer.firstChild.remove();
-}
+  //Clear main
+  contentContainer.classList.remove(
+    "singleAlbumSection",
+    "albums__mainSection",
+    "singleArtistSection",
+    "artists__mainSection",
+    "songs__mainSection",
+    "homepage__mainSection"
+  );
+  while (contentContainer.firstChild) {
+    contentContainer.firstChild.remove();
+  }
 
-/*** Random Artist ***/
-const randomArtist = document.createElement("section");
-randomArtist.classList.add("homepageArtist");
+  contentContainer.classList.add("homepage__mainSection");
 
-fetchRandomArtist().then((artist)=> {
-  randomArtist.innerHTML = `
+  /*** Random Artist ***/
+  const randomArtist = document.createElement("section");
+  randomArtist.classList.add("homepageArtist");
+
+  fetchRandomArtist().then((artist) => {
+    randomArtist.innerHTML = `
   <h3 class="homepageartist__title">Artists</h3>
     <figure class="homepageartist__figure">
       <img
@@ -26,15 +39,15 @@ fetchRandomArtist().then((artist)=> {
         ${artist.artistName}
       </figcaption>
     </figure>
-  `
-})
+  `;
+  });
 
-/*** Random Album ***/
-const randomAlbum = document.createElement("section");
-randomAlbum.classList.add("homepageAlbum");
+  /*** Random Album ***/
+  const randomAlbum = document.createElement("section");
+  randomAlbum.classList.add("homepageAlbum");
 
-fetchRandomAlbum().then((album)=> {
-  randomAlbum.innerHTML = `
+  fetchRandomAlbum().then((album) => {
+    randomAlbum.innerHTML = `
   <h3 class="homepagealbum__title">Albums</h3>
   <figure class="homepagealbum__figure">
     <img
@@ -47,15 +60,15 @@ fetchRandomAlbum().then((album)=> {
       by --ARTIST--
     </figcaption>
   </figure>  
-  `
-})
+  `;
+  });
 
-/*** Random Song ***/
-const randomSong = document.createElement("section");
-randomSong.classList.add("homepageSong");
+  /*** Random Song ***/
+  const randomSong = document.createElement("section");
+  randomSong.classList.add("homepageSong");
 
-fetchRandomSong().then((song)=> {
-  randomSong.innerHTML = `
+  fetchRandomSong().then((song) => {
+    randomSong.innerHTML = `
   <h3 class="homepagesong__title">Songs</h3>
   <figure class="homepagesong__figure">
     <img
@@ -69,12 +82,11 @@ fetchRandomSong().then((song)=> {
       by --ARTIST--
     </figcaption>
   </figure>
-  `
-})
-contentContainer.append(randomArtist);  
-contentContainer.append(randomAlbum);  
-contentContainer.append(randomSong);  
+  `;
+  });
+  contentContainer.append(randomArtist);
+  contentContainer.append(randomAlbum);
+  contentContainer.append(randomSong);
+};
 
-}
-
-export {renderHomepageView}
+export { renderHomepageView };

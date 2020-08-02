@@ -1,13 +1,22 @@
 import { fetchAllArtists } from "../api-helper.js";
 
 const renderArtistsView = () => {
-const contentContainer = document.querySelector("main");
-contentContainer.classList.add("artists__mainSection");
+const contentContainer = document.querySelector(".content__container");
 
 //Clear main
+contentContainer.classList.remove(
+  "singleAlbumSection",
+  "albums__mainSection",
+  "singleArtistSection",
+  "artists__mainSection",
+  "songs__mainSection",
+  "homepage__mainSection"
+);
 while (contentContainer.firstChild) {
   contentContainer.firstChild.remove();
 }
+
+contentContainer.classList.add("artists__mainSection");
 
 const artistsTitle = document.createElement("h2");
 artistsTitle.classList.add("artists__title");

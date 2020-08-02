@@ -1,14 +1,23 @@
-const renderSingleArtistView = ()=> {
+const renderSingleArtistView = () => {
+  const contentContainer = document.querySelector(".content__container");
 
-const contentContainer = document.querySelector("main");
-contentContainer.classList.add("singleArtistSection");
+  //Clear main
+  contentContainer.classList.remove(
+    "singleAlbumSection",
+    "albums__mainSection",
+    "singleArtistSection",
+    "artists__mainSection",
+    "songs__mainSection",
+    "homepage__mainSection"
+  );
 
-//Clear main
-while (contentContainer.firstChild) {
+  while (contentContainer.firstChild) {
     contentContainer.firstChild.remove();
-}
+  }
 
-contentContainer.innerHTML = `
+  contentContainer.classList.add("singleArtistSection");
+
+  contentContainer.innerHTML = `
 <figure class="singleArtist__figure" >
 <img class="singleArtist__picture" src="../static/images/artists/tomWaits.jpg" alt="A picture of band / artist Tom Waits" />
 <figcaption class="singleArtist__name">Tom Waits</figcaption>
@@ -28,7 +37,7 @@ contentContainer.innerHTML = `
 <img class="singleArtist__albumPicture" src="../static/images/albums/realGone.jpg" alt="Cover art for Real Gone, an album by Tom Waits"/>
 <figcaption class="singleArtist__albumName">Real Gone</figcaption>
 </figure>
-`
-}
+`;
+};
 
-export {renderSingleArtistView}
+export { renderSingleArtistView };
