@@ -96,6 +96,7 @@ public class Populator implements CommandLineRunner {
         Album allHourCymbals = new Album("All Hour Cymbals", yeasayer, "allHourCymbals.jpg");
         albumRepo.save(oddBlood);
         albumRepo.save(fragrantWorld);
+        albumRepo.save(allHourCymbals);
 
         //of Montreal
         Album hissingFauna = new Album("Hissing Fauna, Are You the Destroyer?", ofMontreal, "hissingFaunaAreYouTheDestroyer.jpg");
@@ -104,85 +105,114 @@ public class Populator implements CommandLineRunner {
         Album lousy = new Album("Lousy With Sylvianbriar", ofMontreal, "lousyWithSylvianbriar.jpg");
         albumRepo.save(hissingFauna);
         albumRepo.save(aureateGloom);
+        albumRepo.save(sunlandicTwins);
+        albumRepo.save(lousy);
 
         //Florence + the Machine
-        Album lungs = new Album("Lungs", florenceWelch, "lungs.png");
-        Album ceremonials = new Album("Ceremonials", florenceWelch, "ceremonials.png");
+        Album lungs = new Album("Lungs", florenceWelch, "lungs.jpg");
+        Album ceremonials = new Album("Ceremonials", florenceWelch, "ceremonials.jpg");
         albumRepo.save(lungs);
         albumRepo.save(ceremonials);
 
         //St. Vincent
         Album strangeMercy = new Album("Strange Mercy", stVincent, "strangeMercy.jpg");
         Album marryMe = new Album("Marry Me", stVincent, "marryMe.jpg");
+        albumRepo.save(strangeMercy);
+        albumRepo.save(marryMe);
 
         //Arcade Fire
         Album neonBible = new Album("Neon Bible", arcadeFire, "neonBible.jpg");
         Album funeral = new Album("Funeral", arcadeFire, "funeral.jpg");
+        albumRepo.save(neonBible);
+        albumRepo.save(funeral);
 
         //Someone Still Loves You, Boris Yeltsin
         Album highCountry = new Album("The High Country", someoneStillLoves, "highCountry.jpg");
+        albumRepo.save(highCountry);
 
         //Vampire Weekend
         Album vampireWeekendAlbum = new Album("Vampire Weekend", vampireWeekend, "vampireWeekendAlbum.jpg");
+        albumRepo.save(vampireWeekendAlbum);
 
         //Billy Joel
         Album nylonCurtain = new Album("The Nylon Curtain", billyJoel, "nylonCurtain.jpg");
+        albumRepo.save(nylonCurtain);
 
         //Decemberists
         Album craneWife = new Album("The Crane Wife", decemberists, "craneWife.jpg");
+        albumRepo.save(craneWife);
 
         //She & Him
         Album volume2 = new Album("Volume 2", sheAndHim, "volume2.jpg");
+        albumRepo.save(volume2);
 
         //Tchaikovsky
         Album overture1812 = new Album("1812 Overture", tchaikovsky, "overture1812.jpg");
+        albumRepo.save(overture1812);
 
         //Fruit Bats
         Album tripper = new Album("Tripper", fruitBats, "tripper.jpg");
+        albumRepo.save(tripper);
 
         //Spoon
         Album gaGaGaGaGa = new Album("Ga Ga Ga Ga Ga", spoon, "gaGaGaGaGa.jpg");
+        albumRepo.save(gaGaGaGaGa);
 
         //AJJ
         Album candyCigarettes = new Album("Candy Cigarettes Capguns Issues Problems and Such", ajj, "candyCigarettes.jpg");
+        albumRepo.save(candyCigarettes);
 
         //Iron & Wine
         Album creekDrank = new Album("The Creek Drank the Cradle", ironAndWine, "creekDrankTheCradle.jpg");
+        albumRepo.save(creekDrank);
 
         //White Stripes
         Album singleLafayette = new Album("Lafayette Blues (single)", whiteStripes, "lafayetteBluesSingle.jpg");
-        Album singleShakeHands = new Album("Let's Shake Hands (single)", whiteStripes, "letsShakeHands.jpg");
+        Album singleShakeHands = new Album("Let's Shake Hands (single)", whiteStripes, "letsShakeHandsSingle.jpg");
+        albumRepo.save(singleLafayette);
+        albumRepo.save(singleShakeHands);
 
         //Shins
         Album portOfMorrow = new Album("Port of Morrow", shins, "portOfMorrow.jpg");
+        albumRepo.save(portOfMorrow);
 
         //The Moody Blues
         Album daysOfFuturePassed = new Album("Days of Future Passed", moodyBlues, "daysOfFuturePassed.jpg");
+        albumRepo.save(daysOfFuturePassed);
 
         //Neutral Milk Hotel
         Album onAveryIsland = new Album("On Avery Island", neutralMilkHotel, "onAveryIsland.jpg");
+        albumRepo.save(onAveryIsland);
 
         //Belle and Sebastian
         Album writeAboutLove = new Album("Write about Love", belleAndSebastian, "writeAboutLove.jpg");
-        Album singleSuicideGirl = new Album("Suicide Girl", belleAndSebastian, "singleSuicideGirl.jpg");
+        Album singleSuicideGirl = new Album("Suicide Girl", belleAndSebastian, "suicideGirlSingle.jpg");
+        albumRepo.save(writeAboutLove);
+        albumRepo.save(singleSuicideGirl);
 
         //Wishful Thinking
         Album wishfulThinkingAlbum = new Album("Wishful Thinking", wishfulThinking, "wishfulThinking.jpg");
+        albumRepo.save(wishfulThinkingAlbum);
 
         //Bob Dylan
         Album timesChangin = new Album("The Times They Are a-Changin'", bobDylan, "timesTheyAreAChangin.jpg");
+        albumRepo.save(timesChangin);
 
         //Nitty Gritty Dirt Band
         Album symphonionDream = new Album("Symphonion Dream", nittyGritty, "symphonionDream.jpg");
+        albumRepo.save(symphonionDream);
 
         //Franz Liszt
         Album hungarianFantasy = new Album("Piano Concerto No.1: Hungarian Fantasy", franzLiszt, "hungarianFantasy.jpg");
+        albumRepo.save(hungarianFantasy);
 
         //Led Zeppelin
-        Album four = new Album("IV", ledZeppelin, "zeppelinFour.jpg");
+        Album zeppelinFour = new Album("IV", ledZeppelin, "zeppelinFour.jpg");
+        albumRepo.save(zeppelinFour);
 
         //Ensemble Recordings
         Album whereTheBuffaloRoam = new Album("Soundtrack to Where the Buffalo Roam", ensemble, "whereTheBuffaloRoam.jpg");
+        albumRepo.save(whereTheBuffaloRoam);
 
         /* Songs */
 
